@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>02-grid划分方式</title>
+  <title>03-实现等分排列</title>
   <link rel="stylesheet" href="../li-style.css">
   <style>
     ul {
@@ -14,41 +14,27 @@
       border: 1px solid #ccc;
     }
 
-    h2 {
-      text-align: center;
-    }
-
-    .warpper {
+    .wrapper {
       display: grid;
-      grid-template-columns: repeat(3, 100px);
-      grid-template-rows: repeat(2, 50px);
+      /* 设置网格 */
+      grid-template-columns: 100px 1fr 2fr;
+      grid-template-rows: 1fr 2fr 1fr;
       grid-gap: 5px;
-    }
-
-    .item-merge {
-      grid-column-start: span 2
     }
 
   </style>
 </head>
 <body>
-  <ul class="warpper">
+  <ul class="wrapper">
     <li>1</li>
     <li>2</li>
     <li>3</li>
     <li>4</li>
     <li>5</li>
     <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
   </ul>
-
-  <h2>合并子元素</h2>
-  <ul class="warpper">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li class="item-merge">4</li>
-    <li>6</li>
-  </ul>
-
 </body>
 </html>

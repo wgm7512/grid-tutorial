@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>03-实现等分模式</title>
+  <title>04-固定子项目大小后，尽可能多的使用空间</title>
   <link rel="stylesheet" href="../li-style.css">
   <style>
     ul {
@@ -14,18 +14,21 @@
       border: 1px solid #ccc;
     }
 
-    .wrapper1 {
+    h2 {
+      text-align: center;
+    }
+
+    .warpper {
       display: grid;
-      /* 设置网格 */
-      grid-template-columns: 100px 1fr 2fr;
-      grid-template-rows: 1fr 2fr 1fr;
+      grid-template-columns: repeat(auto-fill, 90px);
+      grid-template-rows: 50px 50px 50px;
       grid-gap: 5px;
     }
 
   </style>
 </head>
 <body>
-  <ul class="wrapper1">
+  <ul class="warpper">
     <li>1</li>
     <li>2</li>
     <li>3</li>
@@ -36,5 +39,6 @@
     <li>8</li>
     <li>9</li>
   </ul>
+
 </body>
 </html>
