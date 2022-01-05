@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04-布满整个容器</title>
+  <link rel="stylesheet" href="../li-style.css">
+  <style>
+    ul {
+      width: 400px;
+      height: 200px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .warpper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 90px);
+      grid-template-rows: 50px 50px 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <ul class="warpper">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+
+</body>
+</html>

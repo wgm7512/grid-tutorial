@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-子容器排列方式</title>
+  <link rel="stylesheet" href="../li-style.css">
+  <style>
+    ul {
+      width: 310px;
+      height: 200px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+    h2 {
+      text-align: center;
+    }
+
+    .wrapper1 {
+      display: grid;
+      /* 设置网格 */
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 50px);
+      grid-gap: 5px;
+      grid-auto-flow: column;
+    }
+
+    .wrapper2 {
+      display: grid;
+      /* 设置网格 */
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 50px);
+      grid-gap: 5px;
+      grid-auto-flow: row;
+    }
+    .wrapper3 {
+      display: grid;
+      /* 设置网格 */
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 50px);
+      grid-gap: 5px;
+      grid-auto-flow: row dense;
+    }
+
+    .wrapper2 li:nth-of-type(-n+3),.wrapper3 li:nth-of-type(-n+3) {
+      grid-column-start: span 2;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>从上到下布局</h2>
+  <ul class="wrapper1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+
+  <h2>从左到右布局，但排不下时</h2>
+  <ul class="wrapper2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+
+  <h2>dense 布局</h2>
+  <ul class="wrapper3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+</body>
+</html>

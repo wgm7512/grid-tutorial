@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06-容器内对齐方式</title>
+  <link rel="stylesheet" href="../li-style.css">
+  <style>
+    ul {
+      width: 400px;
+      height: 200px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+    h2 {
+      text-align: center;
+    }
+    /* 容器内对齐方式 */
+    .warpper1 {
+      display: grid;
+      /* 设置网格 */
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 50px 50px 50px;
+      grid-gap: 5px;
+
+      /* 容器内布局 */
+      justify-content: space-between;
+      align-content: space-between;
+    }
+
+    
+    .warpper2 {
+      display: grid;
+      /* 设置网格 */
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 50px 50px 50px;
+      grid-gap: 5px;
+
+      /* 子容器内部对齐方式 */
+      justify-items: center;
+      align-items: center;
+    }
+
+    .warpper2 li {
+      width: 80px;
+      height: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>容器内部对齐方式</h2>
+  <ul class="warpper1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+
+  <h2>子容器内盒子对齐方式</h2>
+  <ul class="warpper2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+</body>
+</html>

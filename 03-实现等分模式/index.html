@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03-实现等分模式</title>
+  <link rel="stylesheet" href="../li-style.css">
+  <style>
+    ul {
+      width: 400px;
+      height: 200px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+
+    .wrapper1 {
+      display: grid;
+      /* 设置网格 */
+      grid-template-columns: 100px 1fr 2fr;
+      grid-template-rows: 1fr 2fr 1fr;
+      grid-gap: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <ul class="wrapper1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+</body>
+</html>
